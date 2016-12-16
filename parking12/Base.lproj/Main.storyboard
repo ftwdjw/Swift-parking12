@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GJk-V0-nFh" userLabel="Map">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GJk-V0-nFh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="516"/>
                             </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ij9-jG-fVd">
                                 <rect key="frame" x="0.0" y="0.0" width="121" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="nDF-Ve-xiz"/>
+                                </constraints>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Men-Ec-RZm">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="516" width="320" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="camera" id="pnj-2Q-OA1">
                                         <connections>
@@ -52,22 +56,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Men-Ec-RZm" secondAttribute="bottom" constant="8" id="2aP-Y0-QwD"/>
                             <constraint firstItem="Ij9-jG-fVd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6af-AG-QxT"/>
-                            <constraint firstItem="Men-Ec-RZm" firstAttribute="top" secondItem="GJk-V0-nFh" secondAttribute="bottom" id="Frg-h9-sLf"/>
-                            <constraint firstItem="Men-Ec-RZm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KWz-lc-8vb"/>
-                            <constraint firstItem="Men-Ec-RZm" firstAttribute="top" secondItem="Ij9-jG-fVd" secondAttribute="bottom" constant="396" id="MIr-2d-bYd"/>
+                            <constraint firstItem="Men-Ec-RZm" firstAttribute="top" secondItem="GJk-V0-nFh" secondAttribute="bottom" id="BoH-zF-Yda"/>
                             <constraint firstAttribute="trailing" secondItem="Ij9-jG-fVd" secondAttribute="trailing" constant="199" id="Pwp-cC-aHU"/>
-                            <constraint firstAttribute="trailing" secondItem="Men-Ec-RZm" secondAttribute="trailing" id="gOg-pO-Yl8"/>
+                            <constraint firstItem="Men-Ec-RZm" firstAttribute="trailing" secondItem="GJk-V0-nFh" secondAttribute="trailing" id="Qw2-oq-VX1"/>
                             <constraint firstAttribute="trailing" secondItem="GJk-V0-nFh" secondAttribute="trailing" id="hBx-TR-RmC"/>
                             <constraint firstItem="Ij9-jG-fVd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l9h-2n-M1T"/>
                             <constraint firstItem="GJk-V0-nFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pVf-Hu-zq5"/>
-                            <constraint firstItem="Men-Ec-RZm" firstAttribute="top" secondItem="GJk-V0-nFh" secondAttribute="bottom" id="s6U-vb-RGn"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Men-Ec-RZm" secondAttribute="bottom" id="tqO-0L-16J"/>
+                            <constraint firstItem="Men-Ec-RZm" firstAttribute="leading" secondItem="GJk-V0-nFh" secondAttribute="leading" id="ryt-N1-GlQ"/>
                             <constraint firstItem="GJk-V0-nFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wtx-zU-wg6"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Ij9-jG-fVd" id="yKf-bv-trO"/>
+                        <outlet property="mapView" destination="GJk-V0-nFh" id="nga-wA-lBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,8 +89,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-fA-ux3">
+                                <rect key="frame" x="0.0" y="-19" width="320" height="535"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="535" id="epX-34-g2z"/>
+                                </constraints>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sau-la-HIb">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="516" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Back" style="plain" id="JFp-tb-q7B">
                                         <connections>
@@ -114,26 +123,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-fA-ux3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sau-la-HIb" firstAttribute="leading" secondItem="pKO-CA-bDi" secondAttribute="leading" id="Jga-Yv-KZd"/>
-                            <constraint firstItem="sau-la-HIb" firstAttribute="top" secondItem="1gZ-fA-ux3" secondAttribute="bottom" id="K1S-ad-LLX"/>
-                            <constraint firstItem="1gZ-fA-ux3" firstAttribute="leading" secondItem="pKO-CA-bDi" secondAttribute="leading" id="Nb7-56-r0M"/>
-                            <constraint firstAttribute="trailing" secondItem="1gZ-fA-ux3" secondAttribute="trailing" id="Nyn-QF-wtH"/>
-                            <constraint firstItem="sau-la-HIb" firstAttribute="top" secondItem="1gZ-fA-ux3" secondAttribute="bottom" id="PSa-bE-UqL"/>
-                            <constraint firstItem="Opy-za-FKt" firstAttribute="top" secondItem="sau-la-HIb" secondAttribute="bottom" id="ank-fT-RgH"/>
-                            <constraint firstItem="1gZ-fA-ux3" firstAttribute="top" secondItem="pKO-CA-bDi" secondAttribute="top" id="q5R-mc-XPH"/>
-                            <constraint firstAttribute="trailing" secondItem="sau-la-HIb" secondAttribute="trailing" id="wCK-Wm-AD0"/>
+                            <constraint firstItem="sau-la-HIb" firstAttribute="leading" secondItem="pKO-CA-bDi" secondAttribute="leading" id="1fs-eb-Hzd"/>
+                            <constraint firstItem="1gZ-fA-ux3" firstAttribute="top" secondItem="pKO-CA-bDi" secondAttribute="topMargin" constant="-19" id="AUR-CG-G6Q"/>
+                            <constraint firstAttribute="trailing" secondItem="sau-la-HIb" secondAttribute="trailing" id="EZg-jz-KJX"/>
+                            <constraint firstItem="Opy-za-FKt" firstAttribute="top" secondItem="sau-la-HIb" secondAttribute="bottom" constant="8" id="Kzg-do-xY6"/>
+                            <constraint firstItem="sau-la-HIb" firstAttribute="leading" secondItem="1gZ-fA-ux3" secondAttribute="leading" id="NKM-89-TFG"/>
+                            <constraint firstItem="sau-la-HIb" firstAttribute="trailing" secondItem="1gZ-fA-ux3" secondAttribute="trailing" id="NZ2-90-uXv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="1gZ-fA-ux3" id="XLh-ph-KWK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvs-n1-AZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="124"/>
+            <point key="canvasLocation" x="907.5" y="123.59154929577466"/>
         </scene>
     </scenes>
 </document>
