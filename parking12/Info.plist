@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSCameraUsageDescription</key>
+	<string>take a picture of your parked car</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>take a photo of your parked car</string>
 	<key>NSLocationAlwaysUsageDescription</key>
