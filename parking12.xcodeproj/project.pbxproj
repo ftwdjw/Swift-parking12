@@ -12,6 +12,10 @@
 		1B31FB3C1E033AF0009E8EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB3A1E033AF0009E8EE1 /* Main.storyboard */; };
 		1B31FB3E1E033AF0009E8EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB3D1E033AF0009E8EE1 /* Assets.xcassets */; };
 		1B31FB411E033AF0009E8EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB3F1E033AF0009E8EE1 /* LaunchScreen.storyboard */; };
+		1B31FB491E033CA5009E8EE1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B31FB481E033CA5009E8EE1 /* CameraViewController.swift */; };
+		1B31FB4C1E033D67009E8EE1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31FB4B1E033D67009E8EE1 /* MapKit.framework */; };
+		1B31FB4E1E033D73009E8EE1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31FB4D1E033D73009E8EE1 /* CoreLocation.framework */; };
+		1B31FB501E033F2B009E8EE1 /* ParkingPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		1B31FB3D1E033AF0009E8EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B31FB401E033AF0009E8EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B31FB421E033AF0009E8EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B31FB481E033CA5009E8EE1 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		1B31FB4B1E033D67009E8EE1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1B31FB4D1E033D73009E8EE1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParkingPhoto.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B31FB4E1E033D73009E8EE1 /* CoreLocation.framework in Frameworks */,
+				1B31FB4C1E033D67009E8EE1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				1B31FB351E033AF0009E8EE1 /* parking12 */,
 				1B31FB341E033AF0009E8EE1 /* Products */,
+				1B31FB4A1E033D66009E8EE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +67,23 @@
 			children = (
 				1B31FB361E033AF0009E8EE1 /* AppDelegate.swift */,
 				1B31FB381E033AF0009E8EE1 /* ViewController.swift */,
+				1B31FB481E033CA5009E8EE1 /* CameraViewController.swift */,
+				1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */,
 				1B31FB3A1E033AF0009E8EE1 /* Main.storyboard */,
 				1B31FB3D1E033AF0009E8EE1 /* Assets.xcassets */,
 				1B31FB3F1E033AF0009E8EE1 /* LaunchScreen.storyboard */,
 				1B31FB421E033AF0009E8EE1 /* Info.plist */,
 			);
 			path = parking12;
+			sourceTree = "<group>";
+		};
+		1B31FB4A1E033D66009E8EE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B31FB4D1E033D73009E8EE1 /* CoreLocation.framework */,
+				1B31FB4B1E033D67009E8EE1 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B31FB411E033AF0009E8EE1 /* LaunchScreen.storyboard in Resources */,
+				1B31FB501E033F2B009E8EE1 /* ParkingPhoto.png in Resources */,
 				1B31FB3E1E033AF0009E8EE1 /* Assets.xcassets in Resources */,
 				1B31FB3C1E033AF0009E8EE1 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +162,7 @@
 			files = (
 				1B31FB391E033AF0009E8EE1 /* ViewController.swift in Sources */,
 				1B31FB371E033AF0009E8EE1 /* AppDelegate.swift in Sources */,
+				1B31FB491E033CA5009E8EE1 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
