@@ -12,6 +12,9 @@ import CoreLocation
 
 class ViewController: UIViewController,CameraViewControllerProtocol, CLLocationManagerDelegate, MKMapViewDelegate{
     
+    //this is for the camera alert
+    var opQueue = OperationQueue()
+    
     var photo = UIImage.init(named: "ParkingPhoto")
     
     var count = 0
@@ -74,6 +77,21 @@ class ViewController: UIViewController,CameraViewControllerProtocol, CLLocationM
         print("add pin button hit")
         dropPin=true
         print("drop pin")
+        //performSegueWithIdentifier("mySegueID", sender: nil)
+        let tapAlert = UIAlertController(title: "Parking Location Picture" , message: "press Camera button if you want a picture of your parking location", preferredStyle: UIAlertControllerStyle.alert)
+        tapAlert.addAction(UIAlertAction(title: "OK", style: .destructive, handler: nil))
+        self.present(tapAlert, animated: true, completion: nil)
+        
+        
+        
+         //performSegue(withIdentifier: "goToCamera", sender: nil)
+        
+        
+    }
+    
+    func goToSegue(){
+        performSegue(withIdentifier: "goToCamera", sender: nil)
+
     }
     
 
