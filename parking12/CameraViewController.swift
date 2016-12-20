@@ -18,10 +18,19 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
     
+    //this is for the camera alert
+    var opQueue = OperationQueue()
+    
+    //initialize the alert Class
+    //let alertSend = AlertClass()
+    
+    
+    
+    
     @IBOutlet weak var imageView: UIImageView!
     
     
-    var photo = UIImage.init(named: "ParkingPhoto")
+    var photo = UIImage.init(named: "picasso1")
     
      let picker = UIImagePickerController()
     
@@ -35,7 +44,49 @@ UINavigationControllerDelegate{
         picker.delegate = self
         
         imageView.image=photo
-    }
+        
+        //alert for camera
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            print("camera available")
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerControllerSourceType.camera
+            picker.cameraCaptureMode = .photo
+            picker.modalPresentationStyle = .fullScreen
+            present(picker,animated: true,completion: nil)
+            
+            self.opQueue.addOperation {//start1
+                // Put queue to the main thread which will update the UI
+                OperationQueue.main.addOperation({//start
+                    self.present(self.picker, animated: true, completion: nil)
+                })//end
+            }//end1
+
+            
+        } else {
+            
+            print("no camera")
+            let alert = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: UIAlertControllerStyle.alert)
+            // add an action (button, we can add more than 1 buttons)
+            
+            
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            // show the alert
+            self.opQueue.addOperation {//start1
+                // Put queue to the main thread which will update the UI
+                OperationQueue.main.addOperation({//start
+                    self.present(alert, animated: true, completion: nil)
+                })//end
+            }//end1
+
+
+        }
+        
+    
+        
+            }//end view did load
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,7 +115,8 @@ UINavigationControllerDelegate{
             picker.modalPresentationStyle = .fullScreen
             present(picker,animated: true,completion: nil)
         } else {
-            noCamera()
+            print("no camera")
+        
         }
 
     }
@@ -109,26 +161,11 @@ UINavigationControllerDelegate{
         
         //count += 1
         //delegate?.dismissWithStringData("Message from DEMO 1 count=\(count)")
-        delegate?.dismissWithImage(photo!)
+        delegate?.dismissWithImage(imageView.image!)
     }
     
     //MARK: - No Camera
     
-    func noCamera(){
-        let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(
-            title: "OK",
-            style:.default,
-            handler: nil)
-        alertVC.addAction(okAction)
-        present(
-            alertVC,
-            animated: true,
-            completion: nil)
-    }
     
     //MARK: - Delegates
     

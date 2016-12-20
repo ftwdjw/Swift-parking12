@@ -16,6 +16,7 @@
 		1B31FB4C1E033D67009E8EE1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31FB4B1E033D67009E8EE1 /* MapKit.framework */; };
 		1B31FB4E1E033D73009E8EE1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B31FB4D1E033D73009E8EE1 /* CoreLocation.framework */; };
 		1B31FB501E033F2B009E8EE1 /* ParkingPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */; };
+		1B31FB721E06E0C3009E8EE1 /* picasso1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B31FB711E06E0C3009E8EE1 /* picasso1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1B31FB4B1E033D67009E8EE1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1B31FB4D1E033D73009E8EE1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ParkingPhoto.png; sourceTree = "<group>"; };
+		1B31FB711E06E0C3009E8EE1 /* picasso1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picasso1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1B31FB381E033AF0009E8EE1 /* ViewController.swift */,
 				1B31FB481E033CA5009E8EE1 /* CameraViewController.swift */,
 				1B31FB4F1E033F2B009E8EE1 /* ParkingPhoto.png */,
+				1B31FB711E06E0C3009E8EE1 /* picasso1.png */,
 				1B31FB3A1E033AF0009E8EE1 /* Main.storyboard */,
 				1B31FB3D1E033AF0009E8EE1 /* Assets.xcassets */,
 				1B31FB3F1E033AF0009E8EE1 /* LaunchScreen.storyboard */,
@@ -113,7 +116,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "John Wetters";
 				TargetAttributes = {
 					1B31FB321E033AF0009E8EE1 = {
@@ -150,6 +153,7 @@
 				1B31FB501E033F2B009E8EE1 /* ParkingPhoto.png in Resources */,
 				1B31FB3E1E033AF0009E8EE1 /* Assets.xcassets in Resources */,
 				1B31FB3C1E033AF0009E8EE1 /* Main.storyboard in Resources */,
+				1B31FB721E06E0C3009E8EE1 /* picasso1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +210,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -255,6 +260,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -324,6 +330,7 @@
 				1B31FB471E033AF0009E8EE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
